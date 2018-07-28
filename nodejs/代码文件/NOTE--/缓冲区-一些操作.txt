@@ -1,0 +1,23 @@
+缓冲区合并:
+	Buffer.concat(list[,totalLength]);
+	list		用于合并的Buffer对象数组列表
+	totalLength	指定合并后Buffer对象的总长度
+//const buf3=concat([buf1,buf2]);
+
+缓冲区比较:	buf.compare(otherBuffer);
+返回值:返回一个数字  表示buf在otherBuffer之前 之后 或 相同
+
+
+拷贝缓冲区:	buf.copy(targetBuffer[,targetStart[,sourceStart[,sourceEnd]]])
+	targetBuffer		要拷贝的Buffer对象(必须)
+	targetStart		数字
+	sourceStart		数字
+	sourceEnd		数字
+buf2.copy(buf1,2);		将buf2插入到buf1指定位置上
+
+缓冲区裁剪:	buf.slice([start[,end]]);
+	start			数字
+	end			数字
+
+缓冲区长度:	buf.length;
+

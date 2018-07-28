@@ -1,0 +1,5 @@
+mysql模块提供一个escape()方法 防止sql注入攻击
+执行语句时:
+const sql='select *from table where username='+
+connection.escape(...);
+

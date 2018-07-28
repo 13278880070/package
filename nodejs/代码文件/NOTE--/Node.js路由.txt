@@ -1,0 +1,6 @@
+建立路由:
+function route(pathnmae){
+	console.log("..."+pathname);
+	....
+}
+

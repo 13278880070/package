@@ -1,0 +1,26 @@
+每个进程总是带有三个流对象:child.stdin,child.stdout,child.stderr
+共享stdio流或者也可以独立的被导流的流对象
+创建子进程  模块:child_process:
+方法:
+exec	-child_process.exec使用子进程执行命令,缓存子进程输出,
+并将子进程的输出以回调函数参数的形式返回
+spawn	-child_process.spawn使用指定的命令行参数创建新进程
+fork	-child_process.fork spawn的特殊形式
+
+
+child_process.exec(command[,options],callback)
+command		要运行的命令
+options		对象
+callback(err,stdout,stderr)
+
+
+child_process.spawn(command[,args][,options])
+command		要运行的命令
+args		Array字符串参数数组
+options Object
+
+
+child_process.fork(modulePath[,args][,options])
+modulePath	string  要在子进程中运行的模块
+args		Array  字符串参数数组
+options		

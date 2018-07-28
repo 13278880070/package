@@ -1,0 +1,4 @@
+大多数时候我们不会直接使用 EventEmitter，而是在对象中继承它。
+包括 fs、net、 http 在内的，只要是支持事件响应的核心模块
+都是 EventEmitter 的子类。
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="login">
+  <head>
+  	<meta charset="utf-8">
+    <title>Node的个人博客</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge",chrome="1">
+    <meta name="description" content="Node的个人博客,分享Node.js技术,不忘初心,共同成长!">
+    <meta name="keywords" content="Node,Node.js,Node的博客,Node.js技术">
+    <link rel='stylesheet' href='/css/normalize.css' />
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <section>
+    	<form action="http://127.0.0.1:3000/login" method="post">
+    		<div class="form-group">
+    			<input type="text" name="name" placeholder="用户名">
+    		</div>
+    		<div class="form-group">
+    			<input type="password" name="password" placeholder="密码">
+                <% if(message) {%>
+                <p> <%= message%></p>
+                <% } %>
+    		</div>
+    		<div class="form-group">
+    			<input type="submit" value="登录">
+    		</div>
+    	</form>
+    </section>
+    <footer>
+    	<p>Copyright 赵凯 2018</p>
+    	<p>Powered by Express</p>
+    </footer>
+  </body>
+</html>

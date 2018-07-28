@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge",chrome="1">
+	<style type="text/css">
+		h2{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h2>成绩录入系统</h2>
+	请输入您要查询的IP地址或域名:
+	<br>
+	<form id="myform" method="post" action="/main">
+		<input type="text" name="ipname">
+		<input type="submit" value="提交">
+		<% if(message1){%>
+		<p><%= message0%></p>
+		<%= message1%>
+		<br>
+		<%= message2%>
+		<br>
+		<%= message3%>
+		<% } %>
+	</form>
+</body>
+</html>
