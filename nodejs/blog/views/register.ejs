@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="login">
+  <head>
+  	<meta charset="utf-8">
+    <title>Node的个人博客</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge",chrome="1">
+    <meta name="description" content="Node的个人博客,分享Node.js技术,不忘初心,共同成长!">
+    <link rel='stylesheet' href='/css/normalize.css' />
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <header id="indexh1">
+        <h1>博客注册系统</h1>
+    </header>
+    <section>
+    	<form action="/register" method="post">
+    		<div class="form-group">
+                <label>用户名: </label>
+    			<input type="text" name="name" placeholder="用户名">
+    		</div>
+            <div class="form-group">
+                <label>邮箱: </label>
+                <input type="text" name="email" placeholder="绑定邮箱">
+                <p><%= emailme %></p>
+            </div>
+            <div class="form-group">
+                <label>联系电话: </label>
+                <input type="text" name="tel" placeholder="联系电话">
+                <p><%= telme %></p>
+            </div>
+    		<div class="form-group">
+                <label>密码: </label>
+    			<input type="password" name="password" placeholder="密码">
+                <p><%= pwdme %></p>
+            </div>
+            <div class="form-group">
+                <label>确认密码: </label>
+                <input type="password" name="password2" placeholder="确认密码">
+            </div>
+    		<div class="form-group">
+    			<input id="resub" type="submit" value="确认注册">
+    		</div>
+    	</form>
+    </section>
+    <footer "id="footer1">
+    	<p>Copyright 赵凯 2018</p>
+    	<p>Powered by Express</p>
+    </footer>
+  </body>
+</html>

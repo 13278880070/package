@@ -1,0 +1,37 @@
+process		全局变量,即global对象的属性
+描述当前Node.js进程状态的对象,提供一个与操作系统的简单接口
+
+
+最常用的成员方法:
+exit		当进程准备退出时触发
+beforeExit	当node清空事件循环,并且没有其他安排时触发这个事件
+uncaughtException
+//当一个异常冒泡回到事件循环,触发这个事件
+signal		进程接收到信号时触发(信号:如SIGINT,SIGUSR1)
+
+
+
+process属性 process. :
+stdout		标准输出流
+stderr		标准错误流
+stdin		标准输入流
+argv		数组:由命令行执行脚本的各个参数组成
+//第一个成员 node  argv[0]
+//第二个脚本文件名  argv[1]
+//其余成员是脚本文件参数  argv[2...]
+
+execPath	当前脚本的Node二进制文件的绝对路径
+execArgv	数组:命令下执行脚本时,在Node可执行文件与脚本文件
+//之间的命令行参数
+env		对象:当前shell的环境变量
+exitCode	进程退出时的代码
+//若进程通过process.exit()退出,不需要指定退出码
+pid		当前进程 进程号
+title		进程名
+
+
+方法:abort()	chdir(directory)	cwd()		exit()
+getgid()	setgid()	getuid()	setuid()
+getgroups()	setgroups()	initgroups()	kill()
+memoryUsage()	nextTick()	umask()		uptime()
+hrtime()

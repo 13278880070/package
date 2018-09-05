@@ -1,0 +1,16 @@
+Buffer缓冲区  读写数据:
+
+写入Node缓冲区  (返回值是实际写入的大小):
+buf.write(string[,offset[,length]][,encoding]);
+	string		写入缓冲区的字符串
+	offset		缓冲区开始写入的索引值
+	length		写入的字节数
+	encoding 	使用的编码
+//根据 encoding 的字符编码写入 string 到 buf 中的 offset 位置
+
+读取Node缓冲区数据  (返回值  返回字符串):
+buf.toString([encoding[,start[,end]]]);
+	encoding 	使用的编码
+	start		指定开始读取的索引位置
+	end		结束位置,默认缓冲区末尾
+

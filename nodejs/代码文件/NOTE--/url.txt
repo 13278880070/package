@@ -1,0 +1,9 @@
+url模块是一个解析 分析 url的模块
+主要的方法:
+
+url.parse()		解析一个url地址,返回一个url对象
+url.formate()		接收一个url对象,返回一个完整的url地址
+//与parse 作用相反
+url.resolve()		接收一个base url对象和href url对象,
+//像浏览器那样解析,返回一个完整的地址
+

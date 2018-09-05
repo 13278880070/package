@@ -1,0 +1,4 @@
+dns模块的功能是域名处理和域名解析:
+	dns.resolve()		将一个域名解析为一个指定类型的数组
+	dns.lookup()		返回第一个被发现的IPv4或IPv6地址
+	dns.reverse()		返回IP解析的域名

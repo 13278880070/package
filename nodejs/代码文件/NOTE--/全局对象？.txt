@@ -1,0 +1,18 @@
+__filename	表示当前正在执行的脚本的文件名,将输出文件
+所在位置的绝对路径
+__dirname	表示当前执行脚本所在的目录
+
+setTimeout(cd,ms)
+//全局函数在指定毫秒(ms)之后执行指定函数(cd)
+//:setTimeout()只执行一次指定函数  返回一个代表定时器的句柄值
+
+clearTimeout(t)
+全局函数用于停止一个之前通过setTimeout()创建的定时器
+(前面通过setTimeout()定义的函数 不执行)
+
+setInterval(cd,ms)
+//全局函数在指定毫秒(ms)之后执行指定函数(cd)
+//setInterval方法会不停地调用函数,直到clearInterval()
+//被调用或窗口被关闭
+
+

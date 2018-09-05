@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		h2{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h2>成绩录入系统</h2>
+	请输入您要查询的IP地址或域名:
+	<br>
+	<form id="myform" method="post" action="/url-set">
+		<input type="text" name="ipname">
+		<input type="submit" value="提交">
+		<% if(message1){ %>
+		<% <h2>查询到的数据如下:</h2> %>
+		<%= message1 <br> %>
+		<%= message2 <br> %>
+		<%= message3 <br> %>
+		<% } %>
+	</form>
+</body>
+</html>

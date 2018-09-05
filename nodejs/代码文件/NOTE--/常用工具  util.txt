@@ -1,0 +1,25 @@
+util.inherits(con,sup):
+//实现对象间 原型 继承的函数
+
+//con仅仅继承了sup在原型中定义的函数,而构造函数内部的sup属性
+//和内部函数没有被继承
+
+原型:prototype
+function sup(){}
+function con(){}
+sup中定义原型函数func:  sup.prototype.func=function(){}
+
+
+util.inspect:
+将一个任意对象object转换为字符串,常用于调试和错误输出
+util.inspect(object,[showHidden],[depth],[colors])
+object
+showHidden		true时,输出更多的隐藏信息
+depth			最大递归层数
+colors			终端显示更漂亮....
+
+
+util.isArray(object)	判断给定参数是否为数组
+util.isRegExp(object)	判断给定参数是否为正则表达式
+util.isDate(object)			  日期
+util.isError(object)			  错误对象

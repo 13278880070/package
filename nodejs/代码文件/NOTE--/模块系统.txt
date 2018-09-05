@@ -1,0 +1,14 @@
+自定义模块:
+//文件1
+function func1(){}
+exports.func1=func1;
+//文件2
+function func2(){}
+exports.func2=func2;
+//文件3
+var f1=require("./文件1");
+var f2=require("./文件2");
+f1();
+f2();
+//函数直接调用
+

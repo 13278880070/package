@@ -1,0 +1,6 @@
+
+router.get('/...',function(req,res,next){
+	res.redirect('/...');		//页面跳转到另外页面
+	res.render("...");		//发送...到客户端
+
+});

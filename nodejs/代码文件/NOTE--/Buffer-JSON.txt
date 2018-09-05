@@ -1,0 +1,7 @@
+Node Buffer	 转化位JSON对象的函数:  buf.toJSON();
+
+JSON.stringify():
+	JSON.stringfy(value[,replacer[,space]]);
+	value		需要转换的JavaScript值(必须)
+	replacer	用于转化结果的函数或数组
+	space		文本添加缩进 空格 换行符

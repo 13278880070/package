@@ -1,0 +1,7 @@
+HTTP方法:
+REST基本架构的四种方法
+GET		用于获取数据
+PUT		更新或添加数据
+DELETE		删除数据
+POST		添加数据
+

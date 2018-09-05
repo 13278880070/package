@@ -1,0 +1,23 @@
+cheerio
+
+$().next()			同级的下一个元素
+$(".test>script")		获取子标签<script>
+
+.find()			获取当前匹配元素集中每个元素的后代??..
+.parent()
+.parents()
+.next()
+.nextAll()
+
+.closet()		集合中的每个元素,DOM树中的祖先来获取与
+			选择器匹配第一个元素
+
+.prev()			上一个兄弟元素?
+.children()
+
+
+
+$("#..").children().first().text();
+
+.eq(i)
+$('li').eq(0).text();

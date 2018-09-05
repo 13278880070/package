@@ -1,0 +1,7 @@
+process.pid		当前进程号
+process.argv		当前进程的命令行参数数组
+//process.argv[0] 当前命令,一般为node，因为通过node执行
+//process.argv[1] 当前命令执行的脚本完整路径
+//process.argv[2,n] 命令参数
+
+process.env

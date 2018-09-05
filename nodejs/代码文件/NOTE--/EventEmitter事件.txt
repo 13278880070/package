@@ -1,0 +1,49 @@
+Node.js 使用事件驱动模型,当web server接收到请求,就把它关闭然后进行
+处理，然后去服务下一个web请求。当这个请求完成，它被放回处理队列
+，当到达队列开头，这个结果被返回给用户
+
+Node.js 有多个内置事件，通过引入events模块，并通过实例化EventEmitter
+类来绑定和监听事件
+var events=require('events');
+var eventEmitter=new events.EventEmitter();
+
+EventEmitter提供多个属性  常见:on emit
+on:绑定事件函数
+server.on('connection',function(stream){
+	console.log('someone connected!');
+}
+
+emit:触发事件
+
+
+方法:
+addListener(event,lister)		
+//为指定事件添加一个监听到监听器数组尾部
+on(event,listener)
+//注册监听
+once(event,listener)			
+//为指定事件注册单次监听 触发后立即解除
+removeListener(event,listener)
+//移除指定事件的某个监听  两个参数:事件名称  回掉函数名称
+removeAllListeners([event])
+//移除所有事件的所有监听
+setMaxListeners(n)
+//提高监听默认限制的数量(默认一般超过10个就有警告信息)
+listeners(event)
+//返回指定事件的监听器数组
+emit(event,[arg1],[arg2],[...])
+//按照参数的顺序执行每个监听器,如果事件有注册监听返回true  否则false
+
+事件:
+newListener:
+	event	  事件名称
+	listener  处理事件函数
+
+removeListener:
+	event	  事件名称
+	listener  处理事件函数
+
+
+EventEmitter中的一个特殊的事件error
+一般要为触发error事件的对象 设置监听器  避免遇到错误程序奔溃
+

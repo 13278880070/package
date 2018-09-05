@@ -1,0 +1,84 @@
+文件系统模块:fs
+var fs=require("fs");
+fs模块中的方法均有异步和同步版本
+如:	异步  fs.readFile()	  同步	 fs.readFileSync()
+异步方法的最后一个参数为回调函数,回调函数的第一个参数
+包含了错误信息(error)
+//建议使用异步方法
+
+打开文件:
+fs.open(path,flags[,mode],callback)
+path		文件路径
+flags		文件打开的行为
+mode		设置文件权限
+callback	回调函数  如:callback(err,data)
+
+打开文件行为flags:r  r+   rs   rs+   w   wx   w+   wx+
+a   ax    a+	 ax+
+
+获取文件信息:
+fs.stat(path,callback);
+callback--回调函数,带有两个参数 err,stats
+function(err,stats){}
+
+stats是fs.Stats对象
+
+stats类中的方法:
+stats.ifFile()			判断是否是文件
+stats.isDirectory()		是否是目录
+stats.isBlockDevice()		是否是块设备
+stats.isCharacterDevice()	是否是字符设备
+stats.isSymnolicLink()		是否是软链接
+stats.isFIFO()			是否是FIFO
+stats.isSocket()		是否是Socket
+
+
+写入文件:
+异步  fs.writeFile(file,data,[,options],callback)
+file		要创建的文件名称
+data		要写入的文件数据
+options		对象:{encoding,mode,flag}默认: utf8  0666 'w'
+callback	只包含错误信息参数 err
+
+
+读取文件:
+异步模式下读取文件的语法格式
+fs.read(fd,buffer,offset,length,position,callback)
+fd		通过fs.open()方法返回的文件的描述符
+buffer		数据写入缓冲区
+offset		缓冲区写入的写入偏移量
+length		要从文件中读取的字节数
+position	文件读取的起始位置
+callback	function(err,bytesRead,buffer)
+// bytesRead	读取的字节数	buffer	  缓冲区对象
+
+关闭文件:
+fs.close(fd,callback)
+fd		通过fs.open()方法返回的文件描述符
+callback	回调函数  无参
+	
+
+截取文件:
+fs.ftruncate(fd,len,callback)
+len		文件截取长度
+callback	无参
+
+
+删除文件:
+fs.unlink(path,callback)	callback无参
+
+
+创建目录:
+fs.mkdir(path[,mode],callback)
+path		文件路径
+mode		设置目录权限	默认0777
+callback	无参
+
+读取目录:
+fs.readdir(path,callback)
+callback	参数:err   3files	
+
+删除目录:
+fs.rmdir(path,callback)
+callback	无参
+
