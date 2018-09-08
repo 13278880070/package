@@ -44,10 +44,12 @@ public class WordCount {
                 Job job = new Job(conf);
                 job.setJarByClass(WordCount.class);
                 job.setJobName("wordcount");
+
                 job.setOutputKeyClass(Text.class);
                 job.setOutputValueClass(IntWritable.class);
                 job.setMapperClass(WordCountMap.class);
                 job.setReducerClass(WordCountReduce.class);
+                
                 job.setInputFormatClass(TextInputFormat.class);
                 FileInputFormat.addInputPath(job, new Path(args[0]));
                 FileOutputFormat.setOutputPath(job,new Path(args[1]));
